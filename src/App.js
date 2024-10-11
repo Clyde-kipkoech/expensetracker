@@ -8,18 +8,20 @@ import AddTransaction from './components/AddTransaction';
 import { GlobalProvider } from './context/Global';
 
 function App() {
-  return (
-    <div>
-      <GlobalProvider/>
-      <Header/>
-      <div className='container'>
-        <Balance/>
-        <IncomeExpense/>
-        <TransactionList/>
-        <AddTransaction/>
-      </div>
-    </div>
-  );
-}
+    return (
+      <GlobalProvider>
+        <div>
+          <Header />
+          <div className="container">
+            <Balance />
+            <IncomeExpense />
+            <TransactionList />
+            <AddTransaction />
+          </div>
+        </div>
+      </GlobalProvider>
+    );
+  }
+
 
 export default App;
